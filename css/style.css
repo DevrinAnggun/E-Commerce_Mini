@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    flex-grow: 1; /* biar isi card melar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* rapih bagian tombol di bawah */
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keranjang</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+<div class="container py-5">
+    <h1 class="text-center mb-4">Keranjang Belanja</h1>
+    <table class="table table-bordered bg-white">
+        <thead>
+            <tr>
+                <th>Produk</th>
+                <th>Qty</th>
+                <th>Harga</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{range .Items}}
+            <tr>
+                <td>{{.Product.Name}}</td>
+                <td>{{.Qty}}</td>
+                <td>Rp{{.Product.Price}}</td>
+                <td>Rp{{.Total}}</td>
+            </tr>
+        {{end}}
+        </tbody>
+    </table>
+    <h3>Total Belanja: Rp{{.Total}}</h3>
+    <a href="/" class="btn btn-secondary">Kembali Belanja</a>
+    <a href="/checkout" class="btn btn-success">Checkout</a>
+</div>
+</body>
+</html>
