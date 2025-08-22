@@ -1,17 +1,21 @@
 .row {
     display: flex;
+    flex-wrap: wrap; /* biar baris baru muncul jika layar kecil */
     gap: 20px;
+    justify-content: flex-start; /* rata kiri, bisa juga center */
 }
 
 .card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-width: 250px; /* lebar minimum tiap card */
+    flex: 1 1 calc(33.333% - 20px); /* 3 kolom per baris, minus gap */
 }
 
 .card-body {
-    flex-grow: 1; /* biar isi card melar */
+    flex-grow: 1; /* isi card melar */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* rapih bagian tombol di bawah */
+    justify-content: space-between; /* tombol selalu di bawah */
 }
